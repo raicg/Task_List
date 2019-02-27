@@ -1,0 +1,41 @@
+
+<nav style="background-color:#0a1922;" class="columns is-mobile navbar is-fixed-top">
+    <div class="column is-2-desktop logo">
+
+    </div>
+
+    <div class="column menu-button">
+    <% if user_signed_in? %>
+        <div class="dropdown is-hoverable is-pulled-right is-right">
+            <div class="dropdown-trigger">
+            <a class="icon is-large menu_icon" aria-haspopup="true" aria-controls="dropdown-menu">
+                <i class="fa fa-bars fa-3x has-text-white-bis"></i>
+            </a>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+				<%= link_to root_path do %>
+                	<p class="dropdown-item">Home</p>
+				<% end %>
+				<%= link_to task_index_path do %>
+                	<p class="dropdown-item">Add Task</p>
+				<% end %>
+				<%= link_to edit_user_registration_path do %>
+                	<p class="dropdown-item">Profile</p>
+				<% end %>
+				
+                <hr class="dropdown-divider">
+				<%= link_to destroy_user_session_path, method: :delete do %>
+                	<p class="dropdown-item">Logout</p>
+				<% end %>
+            </div>
+            </div>
+        </div>
+        <% else %>
+			<%= link_to new_user_session_path do %>
+				<button class="button is-outlined is-pulled-right is-medium is-white login">Login</button> 
+			<% end %>
+                
+        <% end %>
+    </div>
+</nav>

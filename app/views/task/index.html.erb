@@ -1,0 +1,16 @@
+<br><br><br><br>
+<center>
+<%= form_for @task, url: task_index_path(@task) do |f| %>
+  <p>Title</p>
+  <%= f.text_field :title %>
+  <br><br><br><br>
+  <p>Description</p>
+  <%= f.text_field :description %>
+  <br><br><br><br>
+  <p>Date and Time</p>
+  <%= f.datetime_field :due_date %>
+  <br><br><br><br>
+  <%= f.submit "Create" %>
+<% end %>
+<br><br>
+</center>

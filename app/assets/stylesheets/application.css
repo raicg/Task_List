@@ -1,0 +1,151 @@
+body {
+    background: #041221;
+    }
+    .card {overflow:hidden}
+    .card.large {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
+    border-radius: 5px;
+    }
+    .media-content {
+    overflow: hidden;
+    }
+    .title.no-padding {
+    margin-bottom: 0 !important;
+    }
+    #flow span {
+    display: block;
+    width: 120vw;
+    height: 200vw;
+    position: absolute;
+    top: -180vw;
+    left: -50vw;
+    border-radius: 90vw;
+    opacity: 0.6;
+    }
+    .flow-1 {
+    background: #3281ff;
+    -webkit-animation: rotating 20s linear infinite;
+    -moz-animation: rotating 20s linear infinite;
+    -ms-animation: rotating 20s linear infinite;
+    -o-animation: rotating 20s linear infinite;
+    animation: rotating 20s linear infinite;
+    }
+    .flow-2 {
+    background: #f442ee;
+    position: absolute;
+    -webkit-animation: rotating 15s linear infinite;
+    -moz-animation: rotating 15s linear infinite;
+    -ms-animation: rotating 15s linear infinite;
+    -o-animation: rotating 15s linear infinite;
+    animation: rotating 15s linear infinite;
+    }
+    .flow-3 {
+    background: #42eef4;
+    position: absolute;
+    -webkit-animation: rotating 7s linear infinite;
+    -moz-animation: rotating 7s linear infinite;
+    -ms-animation: rotating 7s linear infinite;
+    -o-animation: rotating 7s linear infinite;
+    animation: rotating 7s linear infinite;
+    }
+    @-webkit-keyframes rotating {
+    from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    }
+    to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    }
+    }
+    @keyframes rotating {
+    from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    }
+    to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    }
+    }
+    .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    }
+    .footer{
+    background-color: #222831;
+    color: lemonchiffon;
+    }
+    .footer p, strong
+    {color: lemonchiffon}
+    .footer a:hover
+    {color: crimson;}
+    .fa
+    {color: lemonchiffon;
+        margin: 10px}
+
+    hr {
+        height: 0.3mm;
+        background-color: #222831;
+    }
+
+    div.notification {
+        background-color: #222f38;
+        color: white;
+    }
+
+    div.edit{
+    background-color: #222f38;
+    color: white;
+    }
+
+    a.menu_icon {
+        margin-right: 0.6em;
+        margin-top: 0.3em;
+    }
+
+    button.login {
+        margin-top: 0.4em;
+        margin-right: 0.6em;
+    }
+
+    div.adjust {
+        margin-left: -1.5em;
+    }
+
+    p.title_task {
+        font-weight: bold;
+        font-size: 180%;
+    }
+
+    p.description_task {
+        font-weight: normal;
+        font-size: 110%;
+    }
+
+    p.datetime_task {
+        font-weight: lighter;
+        font-size: 90%;
+        color: black;
+    }
+
+    section.page-title {
+        font-weight: bold;
+        font-size: 250%;
+    }

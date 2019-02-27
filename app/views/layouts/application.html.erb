@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tasklist</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css'>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= render "shared/navbar" %>
+    <main>
+      <section class="hero is-fullheight">
+        <div class="hero-body has-text-centered">
+          <div class="container">
+            <div id="flow">
+              <span class="flow-1"></span>
+              <span class="flow-2"></span>
+              <span class="flow-3"></span>
+            </div>
+            <div class="section">
+              <div class="row columns">
+                <div class="column is-12">
+                  <div class="card large">
+                    <div class="card-content">
+                      <div class="content">
+                        <%= yield %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <%= render "shared/footer" %>
+  </body>
+</html>

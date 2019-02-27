@@ -1,0 +1,31 @@
+<section class="page-title">
+	<!-- Container Start -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-2 text-center">
+				<!-- Title text -->
+				<h3 class="title">Tasks</h3>
+			</div>
+		</div>
+	</div>
+	<!-- Container End -->
+</section>
+
+<section class="section content">
+    <div class="container adjust">
+        <div class="row">
+            <div class="col-lg-12 pt-5 pt-lg-0">
+                <div class="about-content">
+                    <% @task.each do |t| %>
+                        <br>
+                        <p class="title_task"><%= t.title %></p>
+                        <p class="description_task"><%= t.description %></p>
+                        <p class="datetime_task"><%= t.due_date %></p>
+
+                        <br>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
