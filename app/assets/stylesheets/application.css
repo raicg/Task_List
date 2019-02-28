@@ -14,8 +14,10 @@ body {
     margin-bottom: 0 !important;
     }
     h3.title {
-        margin-right: 2vw;
         
+    }
+    p.copyright {
+        font-size: 13px;
     }
     #flow span {
     display: block;
@@ -136,23 +138,23 @@ body {
 
     p.title_task {
         font-weight: bold;
-        font-size: 180%;
+        font-size: 140%;
     }
 
     p.description_task {
         font-weight: normal;
-        font-size: 110%;
+        font-size: 100%;
     }
 
     p.datetime_task {
         font-weight: lighter;
-        font-size: 90%;
+        font-size: 80%;
         color: black;
     }
 
     section.page-title {
         font-weight: bold;
-        font-size: 250%;
+        font-size: 200%;
     }
     
     input#term {
@@ -176,37 +178,65 @@ body {
         background-color: #222f38;
     }
 
+
+
     a.button-delete ~ a.button-edit {
         padding-left: 30px;
         }
 
     p {
-        font-size: 150%;
+        font-size: 130%;
     }
 
+    input[type="submit"]{
+        width: 250px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
     input[type="text"] {
-        width: 400px;
+        width: 300px;
         height: 30px;
         font-size: 20px;
     }
 
-    
+
     input[type="datetime-local"] {
-        width: 400px;
+        width: 300px;
         height: 30px;
         font-size: 20px;
     }
 
     
-    input[type="submit"] {
-        width: 150px;
-        height: 40px;
+    input[value="Log in"] {
+        width: 120px;
+        height: 35px;
         font-size: 20px;
     }
+   
+    input[value="Sign up"] {
+        width: 120px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    input[value="Create"] {
+        width: 120px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    input[value="Update"] {
+        width: 120px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+
 
     input[value="Cancel my account"] {
         width: 200px;
-        height: 40px;
+        height: 35px;
         font-size: 20px;
     }
 
@@ -214,24 +244,33 @@ body {
         height: 40px;
     }
 
+    input[value="Search"] {
+        height: 40px;
+        font-size: 20px;
+    }
+
     p.dropdown-item {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     label {
-        font-size: 150%;
+        font-size: 130%;
     }
 
         
     input[type="password"] {
-        width: 400px;
+        width: 300px;
         height: 30px;
         font-size: 20px;
     }
 
         
     input[type="email"] {
-        width: 400px;
+        width: 300px;
         height: 30px;
         font-size: 20px;
+    }
+
+    div.options {
+        margin 
     }

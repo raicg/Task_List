@@ -1,32 +1,35 @@
-<div class="box card search">
-    <%= form_tag(root_path, method: :get) do %>
-        <div class="field has-addons">
-            <div class="control is-expanded">
-                <%= text_field_tag :term %>
-            </div>
-            <div class="control">
-                <%= submit_tag 'Search', class: "button is-medium is-black is-outlined"%>
-            </div>
+
+<div class="row columns">
+    <div class="column is-10 is-offset-1">
+        <div class="box card search">
+            <%= form_tag(root_path, method: :get) do %>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <%= text_field_tag :term %>
+                    </div>
+                    <div class="control">
+                        <%= submit_tag 'Search', class: "button is-medium is-black is-outlined"%>
+                    </div>
+                </div>
+            <% end %>
         </div>
-    <% end %>
+    </div>
 </div>
 
 
 <div class="row columns">
-    <div class="column is-12">
+    <div class="column is-10 is-offset-1">
         <div class="card large">
             <div class="card-content">
                 <div class="content">
                     <section class="page-title">
                         <!-- Container Start -->
-                        <div class="container">
                             <div class="row">
                                 <div class="col-md-8 offset-md-2 text-center">
                                     <!-- Title text -->
                                     <h3 class="title">Tasks</h3>
                                 </div>
                             </div>
-                        </div>
                         <!-- Container End -->
                     </section>
 
@@ -41,12 +44,12 @@
                                                         <div class="columns">
                                                             <div class="column options1">
                                                                 <br><br><br>
-                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-3x button-delete' do %>
+                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-2x button-delete' do %>
                                                                 <% end %>
                                                                 
                                                                 
 
-                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-3x' do %>
+                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-2x' do %>
                                                                 <% end %>
 
                                                                 <br>
@@ -61,7 +64,7 @@
                                                             </div>
                                                             <div class="column options2">
                                                                 <br><br>
-                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-done far fa-check-circle fa-6x' do %>
+                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-done far fa-check-circle fa-5x' do %>
                                                                 <% end %>
                                                                 <br>
                                                             </div>
@@ -79,12 +82,12 @@
                                                         <div class="columns">
                                                             <div class="column options1">
                                                                 <br><br><br>
-                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-3x button-delete' do %>
+                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-2x button-delete' do %>
                                                                 <% end %>
                                                                 
                                                                 
 
-                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-3x' do %>
+                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-2x' do %>
                                                                 <% end %>
 
                                                                 <br>
@@ -99,7 +102,7 @@
                                                             </div>
                                                             <div class="column options2">
                                                                 <br><br>
-                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-undone fas fa-times fa-6x' do %>
+                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-undone fas fa-times fa-4x' do %>
                                                                 <% end %>
 
                                                                 <br>
