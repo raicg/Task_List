@@ -94,8 +94,7 @@ body {
     -o-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
     }
-    .footer{
-    background-color: #222831;
+    .footer-bottom{
     color: lemonchiffon;
     }
     .footer p, strong
