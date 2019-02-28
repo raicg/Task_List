@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root to: "home#index", as: :root
-    resources :task, controller: 'task', :only => [:index, :create, :destroy], path_names: {index: 'index'}
-
+    resources :task, controller: 'task', :only => [:index, :create, :destroy, :edit, :update], path_names: {index: 'index'} do
+      collection do
+        patch "change_status"
+      end
+    end
   end
 
   unauthenticated :user do

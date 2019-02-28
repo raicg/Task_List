@@ -8,10 +8,10 @@ class TaskController < ApplicationController
     @task = Task.new(task_params)
     @task.user_id = current_user.id
     if @task.save
-      flash[:success] = "Corrida criada"
+      flash[:success] = "Task created."
       redirect_to root_path
     else
-      print "erro aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      @error = @task.errors.full_messages
       render :index
     end
   end
@@ -20,16 +20,43 @@ class TaskController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to root_path
+    respond_to do |format|
+      format.js
+    end
   end
 
+  def change_status
+    @task = Task.find(params[:id])
+    if @task.status == false
+      @task.status = true
+    else
+      @task.status = false
+    end
+    @task.save()
+    respond_to do |format|
+      format.js
+    end
+  end
 
+  def edit 
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    @task = Task.find(params[:id])
+      if @task.update(task_params)
+        redirect_to root_path()
+      else 
+        @error = @task.errors.full_messages
+        render 'edit'
+      end
+  end
 
 
   private
 
   def task_params
-    params.require(:task).permit(:title, :description, :due_date, :user_id)
+    params.require(:task).permit(:title, :description, :due_date, :user_id, :status)
   end
 
 end

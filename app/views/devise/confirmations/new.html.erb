@@ -1,16 +1,32 @@
-<h2>Resend confirmation instructions</h2>
+<div class="section">
+    <div class="row columns">
+        <div class="column is-12">
+            <div class="card large">
+                <div class="card-content">
+                    <div class="content">
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+                        <h2>Resend confirmation instructions</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+                        <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+                          <%= devise_error_messages! %>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
+                          <div class="field">
+                            <%= f.label :email %><br />
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+                          </div>
 
-<%= render "devise/shared/links" %>
+                          <div class="actions">
+                            <%= f.submit "Resend confirmation instructions" %>
+                          </div>
+                        <% end %>
+                        <br>
+                        <%= render "devise/shared/links" %>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

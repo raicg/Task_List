@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_203817) do
     t.string "description"
     t.integer "user_id"
     t.datetime "due_date"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tasks_on_user_id"
@@ -26,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_203817) do
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.boolean "admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

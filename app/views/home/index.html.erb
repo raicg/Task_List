@@ -1,31 +1,120 @@
-<section class="page-title">
-	<!-- Container Start -->
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 offset-md-2 text-center">
-				<!-- Title text -->
-				<h3 class="title">Tasks</h3>
-			</div>
-		</div>
-	</div>
-	<!-- Container End -->
-</section>
+<div class="box card search">
+    <%= form_tag(root_path, method: :get) do %>
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <%= text_field_tag :term %>
+            </div>
+            <div class="control">
+                <%= submit_tag 'Search', class: "button is-medium is-black is-outlined"%>
+            </div>
+        </div>
+    <% end %>
+</div>
 
-<section class="section content">
-    <div class="container adjust">
-        <div class="row">
-            <div class="col-lg-12 pt-5 pt-lg-0">
-                <div class="about-content">
-                    <% @task.each do |t| %>
-                        <br>
-                        <p class="title_task"><%= t.title %></p>
-                        <p class="description_task"><%= t.description %></p>
-                        <p class="datetime_task"><%= t.due_date %></p>
 
-                        <br>
-                    <% end %>
+<div class="row columns">
+    <div class="column is-12">
+        <div class="card large">
+            <div class="card-content">
+                <div class="content">
+                    <section class="page-title">
+                        <!-- Container Start -->
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8 offset-md-2 text-center">
+                                    <!-- Title text -->
+                                    <h3 class="title">Tasks</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Container End -->
+                    </section>
+
+                    <section class="section content">
+                            <div class="row">
+                                <div class="col-lg-12 pt-5 pt-lg-0">
+                                    <div class="about-content">
+                                        <div class="task-undone">
+                                            <% @task.each do |t| %>
+                                                <% if t.status == false %>
+                                                    <div class="row">
+                                                        <div class="columns">
+                                                            <div class="column options1">
+                                                                <br><br><br>
+                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-3x button-delete' do %>
+                                                                <% end %>
+                                                                
+                                                                
+
+                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-3x' do %>
+                                                                <% end %>
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="column">
+                                                                <br>
+                                                                <p class="title_task"><%= t.title %></i></p> 
+                                                                <p class="description_task"><%= t.description %></p>
+                                                                <p class="datetime_task"><%= t.due_date %></p>
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="column options2">
+                                                                <br><br>
+                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-done far fa-check-circle fa-6x' do %>
+                                                                <% end %>
+                                                                <br>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <% end %>
+                                            <% end %>
+                                        </div>
+                                        <br>
+                                        <hr class="task">
+                                        <div class="task-done">
+                                            <% @task.each do |t| %>
+                                                <% if t.status == true %>
+                                                    <div class="row">
+                                                        <div class="columns">
+                                                            <div class="column options1">
+                                                                <br><br><br>
+                                                                <%= link_to task_path(t.id), method: :delete, remote: true, data: { confirm: 'Você tem certeza?' }, class: 'fas fa-trash-alt fa-3x button-delete' do %>
+                                                                <% end %>
+                                                                
+                                                                
+
+                                                                <%= link_to edit_task_path(:id => t.id), class: 'button-edit fas fa-edit fa-3x' do %>
+                                                                <% end %>
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="column">
+                                                                <br>
+                                                                <p class="title_task"><%= t.title %></i></p> 
+                                                                <p class="description_task"><%= t.description %></p>
+                                                                <p class="datetime_task"><%= t.due_date %></p>
+
+                                                                <br>
+                                                            </div>
+                                                            <div class="column options2">
+                                                                <br><br>
+                                                                <%= link_to change_status_task_index_path(:id => t.id), method: :patch, remote: true, class: 'button-undone fas fa-times fa-6x' do %>
+                                                                <% end %>
+
+                                                                <br>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <% end %>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>

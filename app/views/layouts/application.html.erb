@@ -8,7 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css'>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
   </head>
 
   <body>
@@ -22,19 +23,7 @@
               <span class="flow-2"></span>
               <span class="flow-3"></span>
             </div>
-            <div class="section">
-              <div class="row columns">
-                <div class="column is-12">
-                  <div class="card large">
-                    <div class="card-content">
-                      <div class="content">
-                        <%= yield %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <%= yield %>       
           </div>
         </div>
       </section>

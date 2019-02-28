@@ -3,9 +3,33 @@ class HomeController < ApplicationController
   end
 
   def index
-    @task = Task.where(user_id: current_user.id)
+
+    if current_user.admin?
+      @task = Task.all()
+    else
+      @task = Task.where(user_id: current_user.id)
+    end
+    @task = if params[:term]
+      @task = @task.where('title || description LIKE ?', "%#{params[:term]}%")
+    else
+      @task = @task
+    end
+  
   end
 
   def search
+
+    @task = @task.where("title like?", "%#{:term}%" )
+
   end
+
+
+
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :description, :due_date, :user_id, :term)
+  end
+
+
 end

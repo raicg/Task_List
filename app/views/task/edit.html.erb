@@ -6,10 +6,10 @@
           <div class="content">
             <br><br>
             <center>
-            <%= form_for @task, url: task_index_path(@task) do |f| %>
+            <%= form_for @task, url: task_path(:id => @task.id) do |f| %>
               <% if @task.errors.any? %>
                 <% @task.errors.full_messages.each do |m| %>
-                  <p><%= m %></p>
+                    <p><%= m %></p>
                 <% end %>
                 <br><br>
               <% end %>
@@ -22,7 +22,7 @@
               <p>Date and Time</p>
               <%= f.datetime_field :due_date %>
               <br><br><br><br>
-              <%= f.submit "Create" %>
+              <%= f.submit "Edit" %>
             <% end %>
 
             <br><br>

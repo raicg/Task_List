@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.string :description
       t.references :user
       t.datetime :due_date
+      t.boolean :status, default: false
 
       t.timestamps
     end
