@@ -1,12 +1,12 @@
 $('.button-done').bind('ajax:success', function(){
     $(this).closest('.row').appendTo('.task-done')
-    $(this).closest('.button-done').attr('class', 'button-undone fas fa-times fa-6x')
+    $(this).closest('.button-done').attr('class', 'button-undone fas fa-times fa-5x')
 
 });
 
 $('.button-undone').bind('ajax:success', function(){
     $(this).closest('.row').prependTo('.task-undone')
-    $(this).closest('.button-undone').attr('class', 'button-done far fa-check-circle fa-6x')
+    $(this).closest('.button-undone').attr('class', 'button-done far fa-check-circle fa-5x')
 });
 
 

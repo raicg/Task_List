@@ -178,11 +178,21 @@ body {
         background-color: #222f38;
     }
 
+    a.button-edit {
+        margin-right: -5em;
+    }
 
+    a.button-done {
+        margin-left: -2.1em;
+    }
+
+    a.button-undone {
+        margin-left: -2.1em;
+    }
 
     a.button-delete ~ a.button-edit {
         padding-left: 30px;
-        }
+    }
 
     p {
         font-size: 130%;
@@ -269,8 +279,4 @@ body {
         width: 300px;
         height: 30px;
         font-size: 20px;
-    }
-
-    div.options {
-        margin 
     }
