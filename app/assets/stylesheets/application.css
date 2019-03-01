@@ -14,7 +14,7 @@ body {
     margin-bottom: 0 !important;
     }
     h3.title {
-        
+        margin-bottom: -30px;
     }
     p.copyright {
         font-size: 13px;
@@ -173,8 +173,18 @@ body {
         margin-top: -4em;
     }
 
+    hr.task-done {
+        background-color: #222f38;
+    }
+
     hr.task {
         background-color: #222f38;
+        margin-top: -20px;
+    }
+
+    .button-new-task {
+        margin-top: 30px;
+        margin-left: 5.5em;
     }
 
     a.button-edit {

@@ -15,3 +15,18 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function () {
+    $(window).on("resize", function (e) {
+        checkScreenSize();
+    });
+
+    checkScreenSize();
+
+    function checkScreenSize(){
+        var newWindowWidth = $(window).width();
+        if (newWindowWidth < 1000) {
+            $('body').attr('style', 'width:100%; position: fixed;')
+        }
+    }
+});

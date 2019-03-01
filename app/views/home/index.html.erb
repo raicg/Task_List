@@ -27,7 +27,18 @@
                             <div class="row">
                                 <div class="col-md-8 offset-md-2 text-center">
                                     <!-- Title text -->
-                                    <h3 class="title">Tasks</h3>
+                                    <div class="columns title_home">
+                                        <div class="column"></div>
+                                        <div class="column is-centered">
+                                            <h3 class="title">Tasks</h3>
+                                        </div>
+                                        <div class="column new_task_button_home">
+                                            <%= link_to task_index_path do %>
+                	                            <div class="button is-outlined is-black is-medium button-new-task">New Task</div>
+				                            <% end %>
+                                        </div>
+                                    </div>
+                                    <hr class="task">
                                 </div>
                             </div>
                         <!-- Container End -->
@@ -74,7 +85,7 @@
                                             <% end %>
                                         </div>
                                         <br>
-                                        <hr class="task">
+                                        <hr class="task-done">
                                         <div class="task-done">
                                             <% @task.each do |t| %>
                                                 <% if t.status == true %>

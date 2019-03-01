@@ -17,13 +17,6 @@ class HomeController < ApplicationController
   
   end
 
-  def search
-
-    @task = @task.where("title like?", "%#{:term}%" )
-
-  end
-
-
 
   private
 
