@@ -20,5 +20,7 @@ module Tasklist
       g.test_framework :rspec
     end
 
+    config.time_zone = 'Brasilia'
+
   end
 end
