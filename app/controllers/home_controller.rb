@@ -9,10 +9,8 @@ class HomeController < ApplicationController
     else
       @task = Task.where(user_id: current_user.id)
     end
-    @task = if params[:term]
-      @task = @task.where('title || description LIKE ?', "%#{params[:term]}%")
-    else
-      @task = @task
+    if params[:term]
+      @task = @task.where('title || description ILIKE ?', "%#{params[:term]}%")
     end
   
   end
